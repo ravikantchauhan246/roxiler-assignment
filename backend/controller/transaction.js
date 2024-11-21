@@ -130,10 +130,9 @@ const barChartData = async (req, res) => {
             700,
             800,
             900,
-            1000,
             Infinity,
           ],
-          default: "1000-Above",
+          default: "(901-Above",
           output: {
             count: { $sum: 1 },
           },

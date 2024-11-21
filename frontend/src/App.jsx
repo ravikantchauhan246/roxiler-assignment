@@ -5,6 +5,7 @@ import Table from "./components/Table";
 import { getCombinedData, initDatabase } from "./api/api";
 import Statistic from "./components/Statistic";
 import PieChart from "./components/PieChart";
+import BarChart from "./components/BarChart";
 
 function App() {
   const [month, setMonth] = useState("January");
@@ -71,7 +72,7 @@ function App() {
         <Statistic month={month}/>
         <PieChart month={month} initData={initialData} />
       </div>
-        
+        <BarChart month={month} />
       </div>
     </>
   );
