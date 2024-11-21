@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'http://localhost:5000';
+const URL = 'https://roxiler-ravikant.onrender.com';
 
 export const initDatabase = () => axios.get(`${URL}/initialize`);
 
