@@ -17,7 +17,7 @@ const initializeDB = async (req, res) => {
 };
 
 const transactions = async (req, res) => {
-  const { month = "select", search, page = 1, perPage = 10 } = req.query;
+  const { month = "select", search = "", page = 1, perPage = 10 } = req.query;
   const regex = new RegExp(search, "i");
   const monthNumber = new Date(Date.parse(month + " 1, 2021")).getMonth() + 1;
 
@@ -41,8 +41,6 @@ const transactions = async (req, res) => {
       .limit(Number(perPage))
       .skip((page - 1) * perPage);
     // .sort({dateOfSale:-1});
-    res.status(200).json(transactions);
-
     const count = await Transaction.countDocuments(query);
     console.log(transactions, count);
 
