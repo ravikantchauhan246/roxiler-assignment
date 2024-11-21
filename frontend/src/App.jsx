@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import Table from "./components/Table";
 import { getCombinedData, initDatabase } from "./api/api";
 import Statistic from "./components/Statistic";
 import PieChart from "./components/PieChart";
 import BarChart from "./components/BarChart";
+import NotePopUp from "./components/NotePopUp";
 
 function App() {
   const [month, setMonth] = useState("January");
@@ -32,12 +32,13 @@ function App() {
       setInitialData(data.transactions);
     };
     combineData();
-  }, []);
+  },[month]);
 
   // console.log(initialData);
 
   return (
     <>
+      <NotePopUp />
       <div className="h-full w-full flex flex-col items-center mt-12 gap-6">
         {/* Dashboard Header */}
         <div className="h-[290px] w-[290px] bg-gradient-to-br from-orange-200 to-orange-500 flex justify-center items-center rounded-full shadow-lg">
