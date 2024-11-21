@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import Table from "./components/Table";
 import { getCombinedData, initDatabase } from "./api/api";
 import Statistic from "./components/Statistic";
+import PieChart from "./components/PieChart";
 
 function App() {
   const [month, setMonth] = useState("January");
@@ -67,8 +68,8 @@ function App() {
         {/* Table Section */}
         <Table month={month} initialData={initialData} />
         <div className='p-2 flex w-full justify-around items-center'>
-        <Statistic month={month} initData={initialData} />
-        
+        <Statistic month={month}/>
+        <PieChart month={month} initData={initialData} />
       </div>
         
       </div>
