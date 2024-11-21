@@ -34,14 +34,14 @@ function App() {
     combineData();
   }, []);
 
-  console.log(initialData);
+  // console.log(initialData);
 
   return (
     <>
       <div className="h-full w-full flex flex-col items-center mt-12 gap-6">
         {/* Dashboard Header */}
-        <div className="h-[290px] w-[290px] bg-gradient-to-br from-yellow-200 to-yellow-500 flex justify-center items-center rounded-full shadow-lg">
-          <h1 className="text-3xl font-extrabold text-gray-800 text-center">
+        <div className="h-[290px] w-[290px] bg-gradient-to-br from-orange-200 to-orange-500 flex justify-center items-center rounded-full shadow-lg">
+          <h1 className="text-3xl font-bold text-gray-800 text-center">
             Transaction
             <br /> Dashboard
           </h1>
@@ -54,7 +54,7 @@ function App() {
             e.preventDefault();
             setMonth(e.target.value);
           }}
-          className="w-[240px] h-10 border border-gray-300 rounded-md px-2 text-gray-700 shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
+          className="w-[240px] h-10 border border-orange-300 rounded-md px-2 text-gray-700 shadow-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
         >
           <option value={"select"} disabled>
             Select Month
